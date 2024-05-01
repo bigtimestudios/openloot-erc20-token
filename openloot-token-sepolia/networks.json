@@ -1,0 +1,8 @@
+{
+  "sepolia": {
+    "OpenLootTokenTest": {
+      "address": "0xEEB221A559F4aD1746F41460807E56d06D198A58",
+      "startBlock": 5815471
+    }
+  }
+}

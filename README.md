@@ -16,6 +16,11 @@ Run the deployment for the token:
 npx hardhat run scripts/deploy.js
 ```
 
+Validate token contract
+```shell
+npx hardhat verify --contract contracts/OpenLootToken.sol:OpenLootToken --network sepolia {TOKEN_CONTRACT} "Open Loot" 'OPENLOOT' 5000000000 {OWNER}
+```
+
 Useful commands:
 
 ```shell

@@ -7,10 +7,10 @@ async function main() {
   
   console.log("Account balance:", (await ethers.utils.formatEther(weiAmount)));
 
-  const Token = await ethers.getContractFactory("OpenLootTokenTest");
+  const Token = await ethers.getContractFactory("OpenLootToken");
   const args = [
     "Open Loot",
-    "OL",
+    "OPENLOOT",
     5000000000,
     deployer.address // This should be changed to the owner address
   ]
