@@ -21,6 +21,20 @@ Validate token contract
 npx hardhat verify --contract contracts/OpenLootToken.sol:OpenLootToken --network sepolia {TOKEN_CONTRACT} "Open Loot" 'OPENLOOT' 5000000000 {OWNER}
 ```
 
+
+Token in Base chain:
+
+Run the deployment for the token:
+
+```shell
+npx hardhat run scripts/deploy-base.js
+```
+
+Validate token contract
+```shell
+npx hardhat verify --contract contracts/OpenLootTokenBase.sol:OpenLootTokenBase --network baseSepolia {TOKEN_CONTRACT} {STANDARD_ERC20_BRIDGE_ADDRESS} {TOKEN_CONTRACT_ETH} "Open Loot" "OPENLOOT"
+```
+
 Useful commands:
 
 ```shell
