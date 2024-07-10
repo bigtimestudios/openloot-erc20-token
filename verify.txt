@@ -1,0 +1,1 @@
+npx hardhat verify --contract contracts/OpenLootTokenTest.sol:OpenLootTokenTest --network sepolia 0xEEB221A559F4aD1746F41460807E56d06D198A58 "Open Loot" 'OL' 5000000000 0x3119e8491727b880909349B6910cA63c1cFF0004
