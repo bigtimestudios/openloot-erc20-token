@@ -1,0 +1,35 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: OpenLootTokenBase
+    network: base-sepolia
+    source:
+      address: "0x9acd8E640636B616844c57569028359e46bEED43"
+      abi: OpenLootTokenBase
+      startBlock: 12143246
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - Burn
+        - Mint
+        - Transfer
+      abis:
+        - name: OpenLootTokenBase
+          file: ./abis/OpenLootTokenBase.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: Burn(indexed address,uint256)
+          handler: handleBurn
+        - event: Mint(indexed address,uint256)
+          handler: handleMint
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/open-loot-token-base.ts
