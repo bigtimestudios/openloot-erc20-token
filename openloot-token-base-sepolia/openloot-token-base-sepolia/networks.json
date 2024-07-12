@@ -1,8 +1,0 @@
-{
-  "base-sepolia": {
-    "OpenLootTokenBase": {
-      "address": "0x9acd8E640636B616844c57569028359e46bEED43",
-      "startBlock": 12143246
-    }
-  }
-}

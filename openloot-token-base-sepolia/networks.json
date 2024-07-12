@@ -1,8 +1,0 @@
-{
-  "base-sepolia": {
-    "Vault": {
-      "address": "0x564B5D77664D914ebc943317670088A5F32c2053",
-      "startBlock": 12435103
-    }
-  }
-}
