@@ -1,4 +1,13 @@
 async function main() {
+  if (!process.env.L2BRIDGE) {
+    console.error('l2Bridge param missing (L2 standard bridge)')
+    process.exit(1)
+  }
+  if (!process.env.REMOTETOKEN) {
+    console.error('remoteToken param missing (OpenLootToken)')
+    process.exit(1)
+  }
+
   const [deployer] = await ethers.getSigners();
 
   console.log("Deploying contracts with the account:", deployer.address);
@@ -9,8 +18,8 @@ async function main() {
 
   const Token = await ethers.getContractFactory("OpenLootTokenBase");
   const args = [
-    "0x4200000000000000000000000000000000000010", // L2 standard bridge
-    "0x51fe233C9c4518A84dc14eF8033d804FAe35a25D", // OpenLootToken (sepolia)
+    process.env.L2BRIDGE, // L2 standard bridge
+    process.env.REMOTETOKEN, // OpenLootToken Address
     "Open Loot",
     "OPENLOOT",
   ]
