@@ -27,7 +27,7 @@ Token in Base chain:
 Run the deployment for the token:
 
 ```shell
-npx hardhat run scripts/deploy-base.js
+L2BRIDGE=[L2_BRIDGE_ADDRESS] REMOTETOKEN={L1_TOKEN_ADDRESS} npx hardhat run scripts/deploy-base.js
 ```
 
 Validate token contract
