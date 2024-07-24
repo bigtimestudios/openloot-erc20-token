@@ -4,7 +4,7 @@
   "description": "$OPENLOOT ERC-20 Token",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx hardhat test"
   },
   "repository": {
     "type": "git",
