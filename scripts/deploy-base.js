@@ -20,7 +20,7 @@ async function main() {
   const args = [
     process.env.L2BRIDGE, // L2 standard bridge
     process.env.REMOTETOKEN, // OpenLootToken Address
-    "Open Loot",
+    "OPENLOOT",
     "OPENLOOT",
   ]
   const token = await Token.deploy(...args);
