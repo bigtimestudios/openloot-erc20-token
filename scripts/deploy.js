@@ -15,7 +15,7 @@ async function main() {
   const Token = await ethers.getContractFactory("OpenLootToken");
   const args = [
     "OPENLOOT",
-    "OPENLOOT",
+    "OL",
     5000000000,
     process.env.OWNER_ADDRESS
   ]
