@@ -3,6 +3,7 @@ require("@nomiclabs/hardhat-etherscan");
 require('@nomiclabs/hardhat-waffle');
 require('dotenv').config();
 
+console.log(process.env)
 module.exports = {
   solidity: {
     compilers: [
