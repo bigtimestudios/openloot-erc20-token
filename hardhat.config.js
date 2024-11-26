@@ -3,7 +3,6 @@ require("@nomiclabs/hardhat-etherscan");
 require('@nomiclabs/hardhat-waffle');
 require('dotenv').config();
 
-console.log(process.env)
 module.exports = {
   solidity: {
     compilers: [
@@ -40,12 +39,12 @@ module.exports = {
     },
     baseSepolia: {
       url: `https://base-sepolia.g.alchemy.com/v2/${process.env.BASE_SEPOLIA_API_KEY}`,
-      accounts: [process.env.METAMASK_SECRET_KEY],
+      accounts: [process.env.METAMASK_BASE_SECRET_KEY],
       gasPrice: 100000000000
     },
     baseMainnet: {
       url: `https://base-mainnet.g.alchemy.com/v2/${process.env.BASE_MAINNET_API_KEY}`,
-      accounts: [process.env.METAMASK_SECRET_KEY],
+      accounts: [process.env.METAMASK_BASE_SECRET_KEY],
       gasPrice: 100000000000
     },
   },
